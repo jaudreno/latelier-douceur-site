@@ -1,0 +1,185 @@
+
+:root {
+  --miami-blue: #7FDBFF;
+  --mint: #A8E6CF;
+  --mint-dark: #6BC4A3;
+  --paper: #fffdf8;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #fff1f2, #fdf2f8, #f3e8ff);
+  color: #555;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 15px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #666;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: var(--miami-blue);
+  color: white;
+}
+
+section {
+  padding: 60px 10%;
+  display: none;
+}
+
+section.active {
+  display: block;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Paper texture effect */
+.paper-bg {
+  background: var(--paper);
+  background-image: radial-gradient(#eaeaea 1px, transparent 1px);
+  background-size: 15px 15px;
+  border-radius: 25px;
+}
+
+/* Brush stroke line */
+.brush {
+  height: 6px;
+  width: 100px;
+  background: var(--mint);
+  border-radius: 50px;
+  margin: 15px 0 30px;
+  position: relative;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 30px;
+  background: var(--mint);
+  margin-bottom: 20px;
+}
+
+/* Sticker effect */
+.sticker {
+  transform: rotate(-3deg);
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper img {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* Decorative tape */
+.tape {
+  position: absolute;
+  top: -10px;
+  left: 40%;
+  width: 80px;
+  height: 25px;
+  background: rgba(255,255,255,0.7);
+  transform: rotate(-10deg);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px) rotate(-1deg);
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  background: var(--mint);
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--mint-dark);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--miami-blue);
+}
+
+form {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid #cce3de;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #ecfdf5;
+  margin-top: 40px;
+}
+
+@media(max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
